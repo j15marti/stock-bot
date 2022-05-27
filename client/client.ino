@@ -10,7 +10,6 @@
 #define     inPin1  6  //input
 #define     inPin2  7  //input
 #define     servo   9
-#define     serv0   10
 
 double price;
 int priceDecimal;
