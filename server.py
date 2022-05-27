@@ -22,9 +22,8 @@ def getClose():
 
 ser = serial.Serial('com5', 9600)
 count = 0
-tickers = ["gme", "amc", "bbby", "nok", "bb", 
-           "food.to", "aapl", "dis", "nvda"]
-closePrice = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+tickers = ["sava", "ikt", "coin"]
+closePrice = [0, 0, 0]
 getClose()
 
 while True:
