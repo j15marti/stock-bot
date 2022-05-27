@@ -1,2 +1,2 @@
-# stock-monitor
-Shows ticker symbol, current stock price, change throughout the day on a 16x2 display.
+# stock-bot
+Changing Sherwin Chiu's cool stock-monitor into a half-ass stock-robot
