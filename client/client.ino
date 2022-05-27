@@ -7,9 +7,10 @@
 #define     d5      4
 #define     d6      3
 #define     d7      2
-#define     inPin1  6
-#define     inPin2  7
+#define     inPin1  6  //input
+#define     inPin2  7  //input
 #define     servo   9
+#define     serv0   10
 
 double price;
 int priceDecimal;
@@ -54,23 +55,23 @@ void changeTicker(){
 }
 void chooseTicker(){
     if(count ==0){
-        standardPrint("GME");
+        standardPrint("SAVA");
     } else if (count == 1){
-        standardPrint("AMC");
+        standardPrint("IKT");
     } else if (count == 2){
-        standardPrint("BBBY");
-    } else if (count == 3){
-        standardPrint("NOK");
-    } else if (count == 4){
-        standardPrint("BB");
-    } else if (count == 5){
-        standardPrint("FOOD");
-    } else if (count == 6){
-        standardPrint("AAPL");
-    } else if (count == 7){
-        standardPrint("DIS");
-    } else if (count == 8){
-        standardPrint("NVDA");
+        standardPrint("COIN");
+   // } else if (count == 3){
+   //     standardPrint("NOK");
+   // } else if (count == 4){
+   //     standardPrint("BB");
+   // } else if (count == 5){
+   //     standardPrint("FOOD");
+   // } else if (count == 6){
+   //     standardPrint("AAPL");
+   // } else if (count == 7){
+   //     standardPrint("DIS");
+   // } else if (count == 8){
+    //    standardPrint("NVDA");
     }
 }
 void getPrices(){
@@ -84,7 +85,7 @@ void getPrices(){
       closeDecimal = Serial.read();
       closePrice += closeDecimal/100.0;
       if(calcChange() < 0)
-        servo1.write(60);
+        servo1.write(30);
       else if (calcChange() > 0)
         servo1.write(180);
     }
