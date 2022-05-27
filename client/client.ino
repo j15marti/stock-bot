@@ -9,7 +9,8 @@
 #define     d7      2
 #define     inPin1  6  //input
 #define     inPin2  7  //input
-#define     servo   9
+#define     servo1  9  // changed "servo" to "servo1"
+#define     servo2  10 // added "servo2"
 
 double price;
 int priceDecimal;
@@ -19,12 +20,14 @@ int count = 0;
 int debounceDelay = 1000;
 int lastDebounceTime = millis();
 Servo servo1;
+Servo servo2;  //added "Servo servo2"
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 void setup() {
     Serial.begin(9600);  
     pinMode(inPin1, INPUT);
     pinMode(inPin2, INPUT);
-    servo1.attach(servo);
+    servo1.attach(servo1); //changed "(servo)" to "(servo1)"
+    servo2.attach(servo2); //added line servo2
     lcd.begin(16, 2);
 }
     
@@ -87,6 +90,10 @@ void getPrices(){
         servo1.write(30);
       else if (calcChange() > 0)
         servo1.write(180);
+      if(calcChange() < 0).  //added servo2 crap
+        servo2.write(30);
+      else if (calcChange() > 0)
+        servo2.write(180);
     }
     
 }
